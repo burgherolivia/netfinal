@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>DIGITALDIVIDE</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <iframe></iframe>
+  <h1>welcome to the digital divide</h1>
+  <h2>(based on internet penetration rates as of 2020)</h2>
+  <div class="earth"></div>
+  <button>Begin</button>
+  <section>
+    <ul id="menu">
+      <li><a href="html/andorra.html">Andorra</a></li>
+      <li><a href="html/bissau.html">Guinea-Bissau</a></li>
+      <li><a href="html/eritrea.html">Eritrea</a></li>
+      <li><a href="html/fislands.html">Falkland Islands</a></li>
+      <li><a href="html/iceland.html">Iceland</a></li>
+      <li><a href="html/kuwait.html">Kuwait</a></li>
+      <li><a href="html/niger.html">Niger</a></li>
+      <li><a href="html/nkorea.html">North Korea</a></li>
+      <li><a href="html/qatar.html">Qatar</a></li>
+      <li><a href="html/somalia.html">Somalia</a></li>
+    </ul>
+  </section>
+  <script>
+    const b = document.querySelector('button')
+    const f = document.querySelector('iframe')
+    f.width = innerWidth;
+    f.height = innerHeight;
+
+    const urls = [
+      'html/andorra.html',
+      'html/bissau.html',
+      'html/kuwait.html',
+      'html/niger.html',
+      'html/qatar.html',
+      'html/somalia.html',
+      'html/fislands.html',
+      'html/eritrea.html',
+      'html/iceland.html',
+      'html/nkorea.html',
+    ]
+
+    let running = false
+    let c = 0
+
+    function swap() {
+      f.src = urls[c]
+      c = (c >= urls.length) ? 0 : c + 1
+      console.log('currently viewing', urls[c]);
+    }
+
+    b.addEventListener('click', () => {
+      if (!running) {
+        f.style.display = 'block'
+        swap()
+        setInterval(swap, 15 * 1000)
+      }
+    })
+  </script>
+</body>
+
 </html>

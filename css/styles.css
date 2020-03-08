@@ -1,3 +1,77 @@
-body{
+body {
+  background-image: url(../images/background.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  font-family: chalkduster, fantasy;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: chalkduster, fantasy;
+  text-transform: uppercase;
+}
+
+.earth {
+  position: absolute;
+  left: 52%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/earth.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  100% {
+    background-position: 100%
+  }
+}
+
+button {
+  border: 1px solid black;
+  background: white;
+  font-family: chalkduster, fantasy;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  position: absolute;
+  top: 615px;
+  right: 625px;
+}
+
+iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  display: none;
+}
+
+ul#menu li {
+  display:inline;
+}
+
+section{
+  display: flex;
+  color: white;
+
+        justify-content: center;
+        align-items: center;
+        top: 1000px;
 
 }
